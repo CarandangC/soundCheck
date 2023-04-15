@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa");
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Comfortaa", sans-serif;
+}
+
+body{
+    /* text-align: center; */
+    background-image: url("concert.png");
+    background-repeat: 0;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    /* color: rgb(164, 114, 252); */
+}
+
+.box{
+    /* font-size: 5em; */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-collapse: separate;
+    border: 1px solid;
+    width: 350px;
+    height: 350px;
+}
+
+.whitebox{
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-collapse: separate;
+    width: 500px;
+    height: 500px;
+}
+
+.purple {
+    color: rgb(164, 114, 252);
+}
+
+.form-submit-button{
+    background: rgb(164, 114, 252);
+    color: white;
+    border: 1px solid;
+    border-color: black;
+    height: 40px;
+    width: 100px;
+}
+
+.form-border{
+    color: black;
+    border: 1px solid;
+    border-color: black;
+    height: 40px;
+    width: 300px;
+    padding: 5px 10px;
+    margin: 8px 0;
+}
+
+a:link, a:visited{
+    color: blue;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8"/>
+        <title>SoundCheck Register</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='soundCheckLogo.png') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='loginStyle.css') }}">
+    </head>
+
+    <body>
+        <div style="height: 750px; width: 600px;"class ="whitebox">
+            <p style="font-size: 20px; font-weight: bold;"><br><br>You are 1 <span class="purple"> registration</span> away from the night of your life<br><br></p>
+            <h2 style="text-align: left;"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign in<br><br></h2>
+
+            <form action="/REGISTER" method="POST">
+                <label for="fname">First Name:</label><br>
+                <input class="form-border" name="fname" id="fname" placeholder="Jane" size="20" maxlength="50"><br><br>
+                <label for="lname">Last Name:</label><br>
+                <input class="form-border" name="lname" id="lname" placeholder="Doe" size="20" maxlength="50"><br><br>
+                <label for="email">Email:</label><br>
+                <input class="form-border" name="email" id="email" placeholder="jane.doe@gmail.com" size="20" maxlength="50"><br><br>
+                <label for="password">Password:</label><br>
+                <input type="password" class="form-border" name="password" id="password" placeholder="************" size="20" maxlength="40"><br><br>
+                <label for="password">Confirm Password:</label><br>
+                <input type="password" class="form-border" name="confirm_password" id="confirm_password" placeholder="************" size="20" maxlength="40"><br><br>
+                <input class="form-submit-button" type="submit" value="REGISTER">
+
+                <a href="soundCheck">
+                    <span><br><br>Back to Home<br><br></span>
+                </a>
+            </form>
+       </div>
+    </body>
+
+</html>

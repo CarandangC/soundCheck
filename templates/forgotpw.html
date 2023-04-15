@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8"/>
+        <title>SoundCheck Reset Password</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='soundCheckLogo.png') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='loginStyle.css') }}">
+    </head>
+
+    <body>
+       <div style="height: 375px; width: 375px;" class ="whitebox">
+            <p style="font-size: 15px; font-weight: bold;"><br><br>Need a new password? Enter your email below to continue.<br><br></p>
+            <h2 style="text-align: left;"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reset Password<br><br></h2>
+
+            <form action="/FORGOTPW" method="POST">
+                <label for="email">Email:</label><br>
+                <input class="form-border" name="email" id="email" size="20" maxlength="50"><br><br>
+                <input class="form-submit-button" type="submit" value="Send">
+            </form>
+
+            <a href="login">
+                <span><br><br>Back to Sign in</span>
+            </a>
+       </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8"/>
+        <title>SoundCheck Cart</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='soundCheckLogo.png') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='soundCheckStyle.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    </head>
+    <body>
+        <header>
+            <h1><br><br>MY CART<br><br></h1>
+        </header>
+        
+        <div> 
+            <nav style="background-color: rgb(238, 231, 255);">
+                <ul>
+                    <li>
+                        <a class="logo">
+                            <img src="{{ url_for('static', filename='soundCheckLogo.png') }}" alt="Sound Check Logo">
+                            <span class ="nav-item">Welcome</span>
+                        </a>
+                    </li>
+                    <li><a href="loggedIn">
+                        <i class="fas fa-home"></i>
+                        <span class="nav-item">Home</span>
+                    </a></li>
+                    <li><a href="events">
+                        <i class="fas fa-calendar"></i>
+                        <span class="nav-item">Your Events</span>
+                    </a></li>
+
+                    <li><a href="cart">
+                        <i class="fas fa-solid fa-shopping-cart"></i>
+                        <span class="nav-item">Your Cart</span>
+                    </a></li>
+                    <li><div class="dropdown">
+                            <i class="fas fa-question-circle"></i>
+                            <button class="nav-item dropbtn">Help?
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="loggedFAQ">FAQ</a>
+                                <a href="loggedContact">Contact Us</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="soundCheck" class="logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span class="nav-item">Log out</span>
+                    </a></li>                
+                </ul>
+            </nav>
+        </div>
+        
+        <table id="eventsTable">
+            <tr>
+                <th></th>
+            </tr>
+            <tr>
+                <th> Event Name</th>
+                <th> Event Date</th>
+                <th> Event Time</th>
+                <th> Event Location</th>
+                <th> Event Price</th>
+                <th> </th>
+            </tr>
+            {% for event in events %}
+            <tr>
+            <td>{{ event['name'] }}</td>
+            <td>{{ event['date'] }}</td>
+            <td>{{ event['time'] }}</td>
+            <td>{{ event['location'] }}</td>
+            <td>{{ event['price'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <div class="bottomdiv" style="padding-left: 10px;">
+            <form action="CART" method="POST">
+                <br><br>
+                <tr>
+                    <td><label for="cardNumber">Card Number:</label></td>
+                    <td><input class="form-border" type="text" id="cardNumber" name="cardNumber" placeholder="Enter Number"></td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <td><label for="cardName">Name on Card:</label></td>
+                    <td><input class="form-border" type="text" id="cardName" name="cardName" placeholder="Enter Name"></td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <td><label for="cvv">CVV:</label></td>
+                    <td><input class="form-border" type="text" id="cvv" name="cvv" placeholder="Enter CVV"></td> 
+                </tr>
+                <tr>
+                    <br>
+                    <td><label for="expiryDate">Expiry Date:</label></td>
+                    <td><input class="form-border" type="text" id="expiryDate" name="expiryDate" placeholder="Enter Expiry date"></td>  
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <td><label for="billingAddress">Billing Address:</label></td>
+                    <td><input type="text" class="form-border" id="billingAddress:" name="billingAddress" placeholder="Enter Address"></td> 
+                    <br><br>
+                    <td><form><input class="form-submit-button" type="submit" value="Purchase"></form></td>
+                </tr>
+            </form>
+        </div>
+    </body>
+</html>

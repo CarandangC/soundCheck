@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8"/>
+        <title>SoundCheck</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='soundCheckLogo.png') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='soundCheckStyle.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    </head>
+
+    <body>
+        <div>
+            <header>
+                <h1><br><br>EVENTS NEAR YOU<br><br></h1>
+            </header>
+        </div>
+
+        <div> 
+            <nav style="background-color: rgb(238, 231, 255);">
+                <ul>
+                    <li>
+                        <a class="logo">
+                            <img src="{{ url_for('static', filename='soundCheckLogo.png') }}" alt="Sound Check Logo">
+                            <span class ="nav-item">Welcome</span>
+                        </a>
+                    </li>
+                    <li><a href="loggedIn">
+                        <i class="fas fa-home"></i>
+                        <span class="nav-item">Home</span>
+                    </a></li>
+
+                    </a></li>
+                    <li><a href="events">
+                        <i class="fas fa-calendar"></i>
+                        <span class="nav-item">Your Events</span>
+                    </a></li>
+                    <li><a href="cart">
+                        <i class="fas fa-solid fa-shopping-cart"></i>
+                        <span class="nav-item">Your Cart</span>
+                    </a></li>
+                    <li><div class="dropdown">
+                            <i class="fas fa-question-circle"></i>
+                            <button class="nav-item dropbtn">Help?
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="customerFAQ">FAQ</a>
+                                <a href="contact">Contact Us</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="soundCheck" class="logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span class="nav-item">Log out</span>
+                    </a></li>                
+                </ul>
+            </nav>
+        </div>
+
+        <table id="eventsTable">
+            <tr>
+                <th></th>
+            </tr>
+            <tr>
+                <th> Event Name</th>
+                <th> Event Date</th>
+                <th> Event Time</th>
+                <th> Event Location</th>
+                <th> Event Price</th>
+                <th> </th>
+            </tr>
+            <tr>
+                <td> Justin Bieber</td>
+                <td> 2021-12-31</td>
+                <td> 8:00 PM</td>
+                <td> Rogers Centre</td>
+                <td> $120.00</td>
+                <td> <img src="https://media.gq.com/photos/56bcb218cdf2db6945d2ef93/master/pass/bieber-coverstory-square.jpg" alt="Justin Beiber" width="100" height="100"></td>
+                <td><form><input style="border-radius: 12px; width: 125px;" class="form-submit-button" type="submit" value="ADD TO CART"></form><br>
+                </td>
+            </tr>
+            <tr>
+                <td> Shawn Mendes</td>
+                <td> 2022-03-12</td>
+                <td> 7:00 PM</td>
+                <td> Rogers Centre</td>
+                <td> $130.00</td>
+                <td> <img src="https://i.scdn.co/image/ab6761610000e5eb46e7a06fa6dfefaed6a3f0db" alt="Shawn Mendes" width="100" height="100"></td>
+                <td><form><input style="border-radius: 12px; width: 125px;" class="form-submit-button" type="submit" value="ADD TO CART"></form><br>
+            </tr>
+            <tr>
+                <td> BTS</td>
+                <td> 2022-05-24</td>
+                <td> 8:30 PM</td>
+                <td> First Ontario Place</td>
+                <td> $100.00</td>
+                <td> <img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-1097661412.jpg?crop=0.665xw:1.00xh;0.173xw,0&resize=1200:*" alt="BTS" width="100" height="100"></td>
+                <td><form><input style="border-radius: 12px; width: 125px;" class="form-submit-button" type="submit" value="ADD TO CART"></form><br>
+            </tr>
+            <tr>
+                <td> Ed Sheeran</td>
+                <td> 2022-06-29</td>
+                <td> 6:00 PM</td>
+                <td> Scotiabank Arena</td>
+                <td> $150.00</td>
+                <td><img src="https://hips.hearstapps.com/hmg-prod/images/ed-sheeran-GettyImages-494227430_1600.jpg?resize=1200:*" alt="Ed Sheeran" width="100" height="100"></td>
+                <td><form><input style="border-radius: 12px; width: 125px;" class="form-submit-button" type="submit" value="ADD TO CART"></form><br>
+            </tr>
+        </table>
+    </body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8"/>
+        <title>SoundCheck Customer FAQ</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='soundCheckLogo.png') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='soundCheckStyle.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    </head>
+
+    <body>
+        <div>
+            <header>
+                <h1><br><br>CUSTOMER FAQ<br><br></h1>
+            </header>
+        </div>
+
+        <div> 
+            <nav style="background-color: rgb(238, 231, 255);">
+                <ul>
+                    <li>
+                        <a class="logo">
+                            <img src="{{ url_for('static', filename='soundCheckLogo.png') }}" alt="Sound Check Logo">
+                            <span class ="nav-item">Welcome</span>
+                        </a>
+                    </li>
+                    <li><a href="loggedIn">
+                        <i class="fas fa-home"></i>
+                        <span class="nav-item">Home</span>
+                    </a></li>
+                    <li><a href="events">
+                        <i class="fas fa-calendar"></i>
+                        <span class="nav-item">Your Events</span>
+                    </a></li>
+                    <li><a href="cart">
+                        <i class="fas fa-solid fa-shopping-cart"></i>
+                        <span class="nav-item">Your Cart</span>
+                    </a></li>
+                    <li><div class="dropdown">
+                            <i class="fas fa-question-circle"></i>
+                            <button class="nav-item dropbtn">Help?
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="loggedFAQ">FAQ</a>
+                                <a href="loggedContact">Contact Us</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="soundCheck" class="logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span class="nav-item">Log out</span>
+                    </a></li>                
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content">
+            <h2><br><br>Hi there, welcome to the customer FAQ! How can we help?<br><br></h2>
+
+            <div class="wrap-collabsible"> 
+                <input id="q1" class="toggle" type="checkbox"> 
+                <label for="q1" class="lbl-toggle">How do I purchase tickets on the website?</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>To purchase tickets on our website, search for the event you're interested in and select the number of tickets 
+                            you'd like to purchase. Then, proceed to checkout, where you'll be prompted to enter your payment and personal 
+                            information.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="wrap-collabsible"> 
+                <input id="q2" class="toggle" type="checkbox"> 
+                <label for="q2" class="lbl-toggle">How do I access my ticket after purchasing them?</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>Once you've purchased your ticket, you can expect to receive an email confirmation containing your ticket and 
+                            information about the concert. This email will be sent to the email address that you provided when creating your 
+                            account on our website. You can access your ticket by opening the email and downloading the attachment, which should 
+                            be your ticket.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="wrap-collabsible"> 
+                <input id="q3" class="toggle" type="checkbox"> 
+                <label for="q3" class="lbl-toggle">Are there any additional fees or taxes added to the ticket price?</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>Some events may have additional fees or taxes added to the ticket price. You can review the total cost during the checkout 
+                            process before completing your purchase.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="wrap-collabsible"> 
+                <input id="q4" class="toggle" type="checkbox"> 
+                <label for="q4" class="lbl-toggle">What if the event is cancelled or rescheduled?</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>In the event that an event is cancelled or rescheduled, we will do our best to notify all ticket holders via email and/or phone. 
+                            Depending on the specific circumstances, we may be able to offer refunds or provide tickets to a rescheduled event.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="wrap-collabsible"> 
+                <input id="q5" class="toggle" type="checkbox"> 
+                <label for="q5" class="lbl-toggle">What if the event is cancelled or rescheduled?</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>In the event that an event is cancelled or rescheduled, we will do our best to notify all ticket holders via email and/or phone. 
+                            Depending on the specific circumstances, we may be able to offer refunds or provide tickets to a rescheduled event.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="wrap-collabsible"> 
+                <input id="q6" class="toggle" type="checkbox"> 
+                <label for="q6" class="lbl-toggle">What if I lost my ticket or didn't receive it via email?</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>If you lost your ticket or did not receive it via email, please contact our customer support team immediately. We may be able to 
+                            resend the ticket or provide a replacement ticket.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+
+    </body>
+
+</html>

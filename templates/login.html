@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8"/>
+        <title>SoundCheck Login</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='soundCheckLogo.png') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='loginStyle.css') }}">
+    </head>
+
+    <body>
+       <div class ="whitebox">
+            <p style="font-size: 20px; font-weight: bold;"><br><br>The <span class="purple"> night</span> of your life is just 1 sign in away<br><br></p>
+            <h2 style="text-align: left;"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign in<br><br></h2>
+
+            <form action="/LOGIN" method="POST">
+                <label for="email">Email:</label><br>
+                <input class="form-border" name="email" id="email" placeholder="jane.doe@gmail.com" size="20" maxlength="50"><br><br>
+                <label for="password">Password:</label><br>
+                <input type="password" class="form-border" name="password" id="password" placeholder="************" size="20" maxlength="40"><br><br>
+                <input class="form-submit-button" type="submit" value="LOG IN"><br>
+            </form>
+
+            <a href="forgotpw">
+                <span><br>Forgot Password</span><br>
+            </a>
+            <a href="soundCheck">
+                <span><br>Back to Home</span>
+            </a>
+       </div>
+
+    </body>
+
+</html>
