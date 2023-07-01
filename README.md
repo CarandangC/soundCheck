@@ -1,4 +1,4 @@
-SoundCheck
+## **SoundCheck** 
 
 SoundCheck is a Python application that allows you to analyze and visualize audio files. This tool provides insights into various audio parameters and generates visualizations to help you understand the characteristics of the sound.
 
