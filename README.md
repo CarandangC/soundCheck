@@ -22,8 +22,6 @@ Installation:
 
 3. Install the required dependencies:
 
-   pip install -r requirements.txt
-
 Usage:
 
 1. Open a terminal or command prompt.
